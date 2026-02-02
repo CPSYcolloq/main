@@ -4,17 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CPSYcolloq.</title>
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+
     <style>
-        body { font-family: 'Inter', 'Noto Sans JP', sans-serif; background-color: #f8fafc; color: #0f172a; }
-        
+        /* ベーススタイル */
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            background-color: #f8fafc;
+            color: #0f172a;
+        }
+
         /* 明るいラボ風のグリッド背景 */
         .tech-grid {
-            background-image: linear-gradient(#e2e8f0 1px, transparent 1px), linear-gradient(90deg, #e2e8f0 1px, transparent 1px);
+            background-image:
+                linear-gradient(#e2e8f0 1px, transparent 1px),
+                linear-gradient(90deg, #e2e8f0 1px, transparent 1px);
             background-size: 50px 50px;
         }
-        
+
         /* 鮮やかなライムグリーンのアクセント */
         .dot-accent {
             background-image: radial-gradient(#84cc16 2px, transparent 2px); /* lime-500 */
@@ -27,77 +39,157 @@
             background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(226, 232, 240, 0.8);
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            box-shadow:
+                0 4px 6px -1px rgba(0, 0, 0, 0.05),
+                0 2px 4px -1px rgba(0, 0, 0, 0.03);
         }
     </style>
 </head>
+
 <body class="antialiased selection:bg-lime-200 selection:text-lime-900">
 
+    <!-- ========================================
+         背景装飾
+    ========================================= -->
     <div class="fixed inset-0 tech-grid -z-20"></div>
     <div class="fixed top-0 right-0 w-1/2 h-full dot-accent -z-10 mask-image-gradient"></div>
 
-    <header class="py-6 px-6 md:px-12 flex justify-between items-center bg-white/50 backdrop-blur-sm sticky top-0 z-50 border-b border-slate-200">
-        <div class="text-2xl font-black tracking-tighter text-slate-900">CPSYcolloq<span class="text-lime-600">.</span></div>
+    <!-- ========================================
+         ヘッダー / ナビゲーション
+    ========================================= -->
+    <header class="py-6 px-6 md:px-12
+                   flex justify-between items-center
+                   bg-white/50 backdrop-blur-sm
+                   sticky top-0 z-50
+                   border-b border-slate-200">
+
+        <!-- ロゴ -->
+        <div class="text-2xl font-black tracking-tighter text-slate-900">
+            CPSYcolloq<span class="text-lime-600">.</span>
+        </div>
+
+        <!-- ナビゲーションメニュー -->
         <nav class="hidden md:flex gap-8 text-sm font-bold text-slate-500">
             <a href="#organization" class="hover:text-lime-600 transition">CPSY Colloquium.</a>
             <a href="#member" class="hover:text-lime-600 transition">Member</a>
             <a href="#cpsy-tokyo" class="hover:text-lime-600 transition">CPSY TOKYO</a>
-            <a href="#contact" class="bg-lime-600 text-white px-4 py-2 rounded-full hover:bg-lime-700 transition">お問い合わせ</a>
+            <a href="#contact"
+               class="bg-lime-600 text-white px-4 py-2 rounded-full hover:bg-lime-700 transition">
+                お問い合わせ
+            </a>
         </nav>
     </header>
 
+    <!-- ========================================
+         メインコンテンツ
+    ========================================= -->
     <main class="px-6 md:px-12 max-w-7xl mx-auto">
+
+        <!-- ----------------------------------------
+             ヒーローセクション
+        ----------------------------------------- -->
         <section class="py-20 md:py-32 grid md:grid-cols-2 gap-12 items-center relative">
+
+            <!-- 左カラム: テキスト -->
             <div>
-                <span class="bg-lime-100 text-lime-700 font-mono text-xl font-bold px-2 py-1 rounded mb-6 inline-block tracking-wider border border-lime-200">一般社団法人計算論的精神医学コロキウム</span>
-                <h1 class="text-5xl md:text-7xl font-black text-slate-900 leading-[0.9] mb-8 tracking-tight">
+                <span class="bg-lime-100 text-lime-700 font-mono text-xl font-bold
+                             px-2 py-1 rounded mb-6 inline-block tracking-wider border border-lime-200">
+                    一般社団法人計算論的精神医学コロキウム
+                </span>
+
+                <h1 class="text-5xl md:text-7xl font-black text-slate-900
+                           leading-[0.9] mb-8 tracking-tight">
                     COMPUTATIONAL<br>
                     PSYCHIATRY<br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-lime-500 to-green-700">COLLOQUIUM.</span>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-lime-500 to-green-700">
+                        COLLOQUIUM.
+                    </span>
                 </h1>
-                <p class="text-slate-600 text-lg max-w-md leading-relaxed border-l-4 border-lime-500 pl-6">
-                    私たちは計算論的精神医学研究を推進することにより，計算論的精神医学の発展並びに精神医療の充実に寄与することを目的とします。
 
+                <p class="text-slate-600 text-lg max-w-md leading-relaxed
+                          border-l-4 border-lime-500 pl-6">
+                    私たちは計算論的精神医学研究を推進することにより，計算論的精神医学の発展並びに精神医療の充実に寄与することを目的とします。
                 </p>
             </div>
+
+            <!-- 右カラム: イベントバッジ -->
             <div class="relative flex justify-center md:justify-end">
-                <div class="w-80 h-80 md:w-96 md:h-96 rounded-full bg-white border border-slate-200 shadow-xl flex items-center justify-center relative overflow-hidden">
+                <div class="w-80 h-80 md:w-96 md:h-96
+                            rounded-full bg-white border border-slate-200 shadow-xl
+                            flex items-center justify-center
+                            relative overflow-hidden">
+
+                    <!-- 背景アニメーション -->
                     <div class="absolute inset-0 dot-accent opacity-30 animate-spin-slow"></div>
+
+                    <!-- イベント情報 -->
                     <div class="text-center z-10 p-8 bg-white/80 backdrop-blur rounded-full shadow-sm">
-                        <a href="https://sites.google.com/view/cpsytokyo2026" class="block text-lime-600 font-bold text-xl tracking-widest mb-1 hover:text-lime-700 transition">CPSY TOKYO</a>
-                        <a href="https://sites.google.com/view/cpsytokyo2026" class="block text-slate-900 text-5xl font-black tracking-tighter">2026</a>
-                        <a href="https://sites.google.com/view/cpsytokyo2026" class="block text-slate-400 text-sm mt-2 font-mono">Feb 19-20 / HYBRID</a>
+                        <a href="https://sites.google.com/view/cpsytokyo2026"
+                           class="block text-lime-600 font-bold text-xl tracking-widest mb-1 hover:text-lime-700 transition">
+                            CPSY TOKYO
+                        </a>
+                        <a href="https://sites.google.com/view/cpsytokyo2026"
+                           class="block text-slate-900 text-5xl font-black tracking-tighter">
+                            2026
+                        </a>
+                        <a href="https://sites.google.com/view/cpsytokyo2026"
+                           class="block text-slate-400 text-sm mt-2 font-mono">
+                            Feb 19-20 / HYBRID
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- ----------------------------------------
+             法人概要セクション (Organization)
+        ----------------------------------------- -->
         <section id="organization" class="py-24">
             <div class="max-w-4xl mx-auto text-center">
                 <h3 class="text-3xl font-bold text-slate-900 mb-6">Organization</h3>
+
                 <div class="glass-panel p-8 rounded-xl">
                     <h4 class="text-xl font-bold text-slate-900 mb-6 text-left">法人概要</h4>
+
                     <ul class="space-y-4 text-left">
+
+                        <!-- 名称 -->
                         <li class="flex items-start">
-                            <span class="bg-lime-500 text-white text-xs font-bold px-2 py-1 rounded mr-4 mt-0.5">名称</span>
+                            <span class="bg-lime-500 text-white text-xs font-bold px-2 py-1 rounded mr-4 mt-0.5">
+                                名称
+                            </span>
                             <div>
                                 <p class="text-slate-900">一般社団法人　計算論的精神医学コロキウム</p>
                             </div>
                         </li>
+
+                        <!-- 英称 -->
                         <li class="flex items-start">
-                            <span class="bg-lime-500 text-white text-xs font-bold px-2 py-1 rounded mr-4 mt-0.5">英称</span>
+                            <span class="bg-lime-500 text-white text-xs font-bold px-2 py-1 rounded mr-4 mt-0.5">
+                                英称
+                            </span>
                             <div>
                                 <h5 class="text-slate-900">Computational Psychiatry Colloquium（略称：CPSYcolloq.)</h5>
                             </div>
                         </li>
+
+                        <!-- 目的 -->
                         <li class="flex items-start">
-                            <span class="bg-lime-500 text-white text-xs font-bold px-2 py-1 rounded mr-4 mt-0.5">目的</span>
+                            <span class="bg-lime-500 text-white text-xs font-bold px-2 py-1 rounded mr-4 mt-0.5">
+                                目的
+                            </span>
                             <div>
-                                <h5 class="text-slate-900">当法人は，計算論的精神医学研究を推進することにより，計算論的精神医学の発展並びに精神医療の充実に寄与することを目的とする。</h5>
+                                <h5 class="text-slate-900">
+                                    当法人は，計算論的精神医学研究を推進することにより，計算論的精神医学の発展並びに精神医療の充実に寄与することを目的とする。
+                                </h5>
                             </div>
                         </li>
+
+                        <!-- 活動内容 -->
                         <li class="flex items-start">
-                            <span class="bg-lime-500 text-white text-xs font-bold px-2 py-1 rounded mr-4 mt-0.5">活動内容</span>
+                            <span class="bg-lime-500 text-white text-xs font-bold px-2 py-1 rounded mr-4 mt-0.5">
+                                活動内容
+                            </span>
                             <div>
                                 <ol class="list-decimal list-inside space-y-1 text-slate-900">
                                     <li>計算論的精神医学に関する学術講演会，研究会等の開催</li>
@@ -107,9 +199,13 @@
                                 </ol>
                             </div>
                         </li>
+
+                        <!-- 役員 -->
                         <li class="flex items-start">
-                            <span class="bg-lime-500 text-white text-xs font-bold px-2 py-1 rounded mr-4 mt-0.5">役員</span>
-                           <div>
+                            <span class="bg-lime-500 text-white text-xs font-bold px-2 py-1 rounded mr-4 mt-0.5">
+                                役員
+                            </span>
+                            <div>
                                 <table class="table-auto w-full text-slate-900">
                                     <tbody>
                                         <tr>
@@ -136,24 +232,44 @@
                                 </table>
                             </div>
                         </li>
+
+                        <!-- 定款 -->
                         <li class="flex items-start">
-                            <span class="bg-lime-500 text-white text-xs font-bold px-2 py-1 rounded mr-4 mt-0.5">定款</span>
+                            <span class="bg-lime-500 text-white text-xs font-bold px-2 py-1 rounded mr-4 mt-0.5">
+                                定款
+                            </span>
                             <div>
-                                <p class="text-slate-900"><a href="./PDF/articles-of-incorporation.pdf" class="text-lime-600 hover:text-lime-700 underline">定款PDF</a> <br> ※公開している定款については、個人情報保護の観点から、設立時社員および役員の住所等が記載された「附則」の掲載を省略しています。</p>
+                                <p class="text-slate-900">
+                                    <a href="./PDF/articles-of-incorporation.pdf"
+                                       class="text-lime-600 hover:text-lime-700 underline">
+                                        定款PDF
+                                    </a>
+                                    <br>
+                                    ※公開している定款については、個人情報保護の観点から、設立時社員および役員の住所等が記載された「附則」の掲載を省略しています。
+                                </p>
                             </div>
                         </li>
+
+                        <!-- 沿革 -->
                         <li class="flex items-start">
-                            <span class="bg-lime-500 text-white text-xs font-bold px-2 py-1 rounded mr-4 mt-0.5">沿革</span>
+                            <span class="bg-lime-500 text-white text-xs font-bold px-2 py-1 rounded mr-4 mt-0.5">
+                                沿革
+                            </span>
                             <div>
                                 <table class="table-auto w-full text-slate-900">
                                     <tbody>
                                         <tr>
                                             <td class="px-4 py-0 w-32 whitespace-nowrap">2015年2月24日</td>
-                                            <td class="px-4 py-0">第1回目のCPSYコロキウム開催（国立精神・神経医療研究センター）<br>その後もCPSY TOKYO2024まで定期的に開催（<a href="https://cpcolloquium.github.io/cp_book/cpsy_colloquium.html" class="text-lime-600 hover:text-lime-700 underline">過去の開催情報</a>）</td>
+                                            <td class="px-4 py-0">
+                                                第1回目のCPSYコロキウム開催（国立精神・神経医療研究センター）<br>
+                                                その後もCPSY TOKYO2024まで定期的に開催（<a href="https://cpcolloquium.github.io/cp_book/cpsy_colloquium.html" class="text-lime-600 hover:text-lime-700 underline">過去の開催情報</a>）
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td class="px-4 py-0 w-32 whitespace-nowrap">2019年1月25日</td>
-                                            <td class="px-4 py-0">勁草書房より『計算論的精神医学: 情報処理過程から読み解く精神障害』出版</td>
+                                            <td class="px-4 py-0">
+                                                勁草書房より『計算論的精神医学: 情報処理過程から読み解く精神障害』出版
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td class="px-4 py-0 w-32 whitespace-nowrap">2024年3月28-29日</td>
@@ -165,7 +281,9 @@
                                         </tr>
                                         <tr>
                                             <td class="px-4 py-0 w-32 whitespace-nowrap">2025年4月1日</td>
-                                            <td class="px-4 py-0">金芳堂より『R/Pythonではじめる計算論的精神医学』出版</td>
+                                            <td class="px-4 py-0">
+                                                金芳堂より『R/Pythonではじめる計算論的精神医学』出版
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td class="px-4 py-0 w-32 whitespace-nowrap">2025年12月1日</td>
@@ -183,11 +301,15 @@
                                 </table>
                             </div>
                         </li>
+
                     </ul>
                 </div>
             </div>
         </section>
 
+        <!-- ----------------------------------------
+             会員セクション (Member)
+        ----------------------------------------- -->
         <section id="member" class="py-24">
             <div class="max-w-4xl mx-auto text-center">
                 <h3 class="text-3xl font-bold text-slate-900 mb-6">Member</h3>
@@ -198,27 +320,68 @@
             </div>
         </section>
 
+        <!-- ----------------------------------------
+             次回イベント (CPSY TOKYO)
+        ----------------------------------------- -->
         <section id="cpsy-tokyo" class="py-12">
             <div class="bg-slate-900 rounded-2xl p-1 shadow-2xl overflow-hidden relative">
+
+                <!-- 背景装飾 -->
                 <div class="absolute top-0 right-0 w-64 h-64 bg-lime-500/20 rounded-full blur-3xl -mr-16 -mt-16"></div>
-                
-                <div class="bg-slate-900 rounded-xl p-8 md:p-12 flex flex-col md:flex-row justify-between items-center gap-8 relative z-10">
+
+                <div class="bg-slate-900 rounded-xl p-8 md:p-12
+                            flex flex-col md:flex-row justify-between items-center gap-8
+                            relative z-10">
+
+                    <!-- イベント情報 -->
                     <div class="flex-1">
+                        <!-- NEXTイベントバッジ -->
                         <div class="flex items-center gap-3 mb-4">
                             <span class="relative flex h-3 w-3">
-                              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-lime-400 opacity-75"></span>
-                              <span class="relative inline-flex rounded-full h-3 w-3 bg-lime-500"></span>
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-lime-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-3 w-3 bg-lime-500"></span>
                             </span>
                             <span class="text-lime-400 font-bold text-sm tracking-widest">NEXT EVENT</span>
                         </div>
-                        <h2 class="text-3xl md:text-4xl font-bold text-white mb-3">CPSY TOKYO 2026　</h2>
+
+                        <h2 class="text-3xl md:text-4xl font-bold text-white mb-3">
+                            CPSY TOKYO 2026
+                        </h2>
+
+                        <!-- 日程・場所 -->
                         <div class="flex flex-col sm:flex-row gap-4 text-slate-300 font-mono text-sm">
-                            <span class="flex items-center"><svg class="w-4 h-4 mr-2 text-lime-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg> 2026.02.19(Thu) - 20(Fri)</span>
-                            <span class="flex items-center"><svg class="w-4 h-4 mr-2 text-lime-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg> 専修大学 神田キャンパス</span>
+                            <span class="flex items-center">
+                                <!-- カレンダーアイコン -->
+                                <svg class="w-4 h-4 mr-2 text-lime-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                    </path>
+                                </svg>
+                                2026.02.19(Thu) - 20(Fri)
+                            </span>
+                            <span class="flex items-center">
+                                <!-- 場所アイコン -->
+                                <svg class="w-4 h-4 mr-2 text-lime-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                    </path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z">
+                                    </path>
+                                </svg>
+                                専修大学 神田キャンパス
+                            </span>
                         </div>
                     </div>
+
+                    <!-- 登録ボタン -->
                     <div>
-                         <a href="https://sites.google.com/view/cpsytokyo2026" class="inline-block bg-lime-500 text-slate-900 font-bold px-8 py-4 rounded-lg hover:bg-lime-400 hover:scale-105 transition shadow-lg shadow-lime-500/20 text-center min-w-[200px]">
+                        <a href="https://sites.google.com/view/cpsytokyo2026"
+                           class="inline-block bg-lime-500 text-slate-900 font-bold
+                                  px-8 py-4 rounded-lg
+                                  hover:bg-lime-400 hover:scale-105 transition
+                                  shadow-lg shadow-lime-500/20
+                                  text-center min-w-[200px]">
                             参加登録・詳細
                         </a>
                     </div>
@@ -226,51 +389,131 @@
             </div>
         </section>
 
+        <!-- ----------------------------------------
+             過去のイベント (Past Events)
+        ----------------------------------------- -->
         <section id="past-events" class="py-12">
             <div class="bg-slate-900 rounded-2xl p-1 shadow-2xl overflow-hidden relative">
+
+                <!-- 背景装飾 -->
                 <div class="absolute top-0 right-0 w-64 h-64 bg-lime-500/20 rounded-full blur-3xl -mr-16 -mt-16"></div>
-                
+
                 <div class="bg-slate-900 rounded-xl p-8 md:p-12 relative z-10">
+
                     <div class="flex items-center gap-3 mb-8">
                         <span class="text-lime-400 font-bold text-sm tracking-widest">PAST EVENTS</span>
                     </div>
-                    
+
                     <div class="space-y-8">
+
+                        <!-- CPSY TOKYO 2025 -->
                         <div>
-                            <a href="https://sites.google.com/view/cpsytokyo2025" class="block text-2xl md:text-3xl font-bold text-white mb-2 hover:text-lime-300 transition">CPSY TOKYO 2025</a>
+                            <a href="https://sites.google.com/view/cpsytokyo2025"
+                               class="block text-2xl md:text-3xl font-bold text-white mb-2 hover:text-lime-300 transition">
+                                CPSY TOKYO 2025
+                            </a>
                             <div class="flex flex-col sm:flex-row gap-4 text-slate-300 font-mono text-sm">
-                                <span class="flex items-center"><svg class="w-4 h-4 mr-2 text-lime-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg> 2025.02.19(Wed) - 20(Thu)</span>
-                                <span class="flex items-center"><svg class="w-4 h-4 mr-2 text-lime-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg> 専修大学 神田キャンパス</span>
+                                <span class="flex items-center">
+                                    <!-- カレンダーアイコン -->
+                                    <svg class="w-4 h-4 mr-2 text-lime-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                        </path>
+                                    </svg>
+                                    2025.02.19(Wed) - 20(Thu)
+                                </span>
+                                <span class="flex items-center">
+                                    <!-- 場所アイコン -->
+                                    <svg class="w-4 h-4 mr-2 text-lime-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                        </path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M15 11a3 3 0 11-6 0 3 3 0 016 0z">
+                                        </path>
+                                    </svg>
+                                    専修大学 神田キャンパス
+                                </span>
                             </div>
                         </div>
-                        
+
+                        <!-- CPSY TOKYO 2024 -->
                         <div class="pt-6 border-t border-slate-600">
-                            <a href="https://sites.google.com/view/cpsytokyo2024" class="block text-2xl md:text-3xl font-bold text-white mb-2 hover:text-lime-300 transition">CPSY TOKYO 2024</a>
+                            <a href="https://sites.google.com/view/cpsytokyo2024"
+                               class="block text-2xl md:text-3xl font-bold text-white mb-2 hover:text-lime-300 transition">
+                                CPSY TOKYO 2024
+                            </a>
                             <div class="flex flex-col sm:flex-row gap-4 text-slate-300 font-mono text-sm">
-                                <span class="flex items-center"><svg class="w-4 h-4 mr-2 text-lime-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg> 2024.03.28(Thu) - 29(Fri)</span>
-                                <span class="flex items-center"><svg class="w-4 h-4 mr-2 text-lime-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg> 国立精神・神経医療研究センター</span>
+                                <span class="flex items-center">
+                                    <!-- カレンダーアイコン -->
+                                    <svg class="w-4 h-4 mr-2 text-lime-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                        </path>
+                                    </svg>
+                                    2024.03.28(Thu) - 29(Fri)
+                                </span>
+                                <span class="flex items-center">
+                                    <!-- 場所アイコン -->
+                                    <svg class="w-4 h-4 mr-2 text-lime-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                        </path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M15 11a3 3 0 11-6 0 3 3 0 016 0z">
+                                        </path>
+                                    </svg>
+                                    国立精神・神経医療研究センター
+                                </span>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
         </section>
-    <section id="contact" class="py-20 bg-cema-green text-black">
-        <div class="container mx-auto px-6 max-w-4xl text-center">
-            <h2 class="text-3xl font-bold mb-8">計算論的精神医学コロキウムへのお問い合わせ</h2>
-            <p class="text-lg mb-12 opacity-90">
-                計算論的精神医学コロキウムに関しては、以下のフォームよりお問い合わせください。
-            </p>
-            <div class="bg-white p-8 rounded-2xl shadow-xl text-left text-slate-800">
-                <div class="w-full">
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfFNHW7tWFIDqytU8DHp29oU5po-e5bR_oTSGQQRXQXpIRAIA/viewform?usp=publish-editor" class="w-full h-[720px] rounded" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
-                    <p class="mt-4 text-sm text-slate-500 italic">フォームが表示されない場合は、<a href="https://docs.google.com/forms/d/e/1FAIpQLSfFNHW7tWFIDqytU8DHp29oU5po-e5bR_oTSGQQRXQXpIRAIA/viewform?usp=publish-editor" class="text-cema-green underline" target="_blank" rel="noopener noreferrer">こちらのフォーム</a>を開いてください。</p>
+
+        <!-- ----------------------------------------
+             お問い合わせセクション (Contact)
+        ----------------------------------------- -->
+        <section id="contact" class="py-20 bg-cema-green text-black">
+            <div class="container mx-auto px-6 max-w-4xl text-center">
+                <h2 class="text-3xl font-bold mb-8">計算論的精神医学コロキウムへのお問い合わせ</h2>
+
+                <p class="text-lg mb-12 opacity-90">
+                    計算論的精神医学コロキウムに関しては、以下のフォームよりお問い合わせください。
+                </p>
+
+                <div class="bg-white p-8 rounded-2xl shadow-xl text-left text-slate-800">
+                    <div class="w-full">
+                        <!-- Google フォーム埋め込み -->
+                        <iframe
+                            src="https://docs.google.com/forms/d/e/1FAIpQLSfFNHW7tWFIDqytU8DHp29oU5po-e5bR_oTSGQQRXQXpIRAIA/viewform?usp=publish-editor"
+                            title="お問い合わせフォーム"
+                            class="w-full h-[720px] rounded"
+                            frameborder="0"
+                            marginheight="0"
+                            marginwidth="0">
+                            読み込んでいます…
+                        </iframe>
+
+                        <p class="mt-4 text-sm text-slate-500 italic">
+                            フォームが表示されない場合は、<a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSfFNHW7tWFIDqytU8DHp29oU5po-e5bR_oTSGQQRXQXpIRAIA/viewform?usp=publish-editor"
+                                class="text-cema-green underline"
+                                target="_blank"
+                                rel="noopener noreferrer">こちらのフォーム</a>を開いてください。
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
     </main>
-    
+
+    <!-- ========================================
+         フッター
+    ========================================= -->
     <footer class="bg-white border-t border-slate-200 py-12 mt-12">
         <div class="max-w-7xl mx-auto px-6 text-center">
             <p class="text-slate-900 font-bold mb-2">一般社団法人 計算論的精神医学コロキウム</p>
